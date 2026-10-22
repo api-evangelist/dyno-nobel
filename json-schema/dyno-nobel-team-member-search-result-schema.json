@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/dyno-nobel/main/json-schema/dyno-nobel-team-member-search-result-schema.json",
+  "title": "TeamMemberSearchResult",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/dyno-nobel-openapi.yml#/components/schemas/TeamMemberSearchResult",
+  "type": "object",
+  "properties": {
+    "result": {
+      "$ref": "#/$defs/TeamMemberSearchResultItemPaging"
+    },
+    "facets": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/$defs/TeamMemberGroupFacetCount"
+      }
+    },
+    "resultMessage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "ImagePropsVm": {
+      "type": "object",
+      "properties": {
+        "alternateText": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "defaultSrc": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sizesAttribute": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "srcSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "srcSetWebp": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "isBackground": {
+          "type": "boolean"
+        },
+        "textContent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isLazy": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "LinkPropsVm": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "href": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ariaLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "OptionItem": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "nullable": true
+        },
+        "count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "selected": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TeamMemberGroupFacetCount": {
+      "type": "object",
+      "properties": {
+        "facetName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/OptionItem"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "TeamMemberSearchResultItem": {
+      "type": "object",
+      "properties": {
+        "profileImage": {
+          "$ref": "#/$defs/ImagePropsVm"
+        },
+        "fullName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "position": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "company": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "department": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mobileNumber": {
+          "$ref": "#/$defs/LinkPropsVm"
+        },
+        "email": {
+          "$ref": "#/$defs/LinkPropsVm"
+        },
+        "naa": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "faa": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "TeamMemberSearchResultItemPaging": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/TeamMemberSearchResultItem"
+          }
+        },
+        "totalItem": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "currentPage": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "readOnly": true
+        },
+        "hasNextPage": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

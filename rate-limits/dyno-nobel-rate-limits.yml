@@ -1,0 +1,7 @@
+name: Dyno Nobel rate limits
+generated: '2026-10-21'
+method: none
+source: https://dev.dynonobel.com/swagger/index.html
+limit_count: 0
+note: No rate limits are published. The only API surface is an undocumented website search backend (Swagger UI on dev.dynonobel.com) with no developer docs.
+limits: []

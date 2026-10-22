@@ -1,0 +1,148 @@
+name: Dyno Nobel MCP server (candidate)
+type: MCPServer
+generated: '2026-10-21'
+method: derived
+source: openapi/dyno-nobel-openapi.yml
+status: candidate
+description: 'No official Dyno Nobel MCP server was found (pre-flight dossier verdict mcp: absent on www.dynonobel.com, dev.dynonobel.com, dev.dynonobel.com.au, investors.dynonobel.com.au; a web search
+  on 2026-10-21 found nothing). This is a candidate tool list derived from the read-only GET search operations of the undocumented website search backend. Not called or verified.'
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived
+search:
+  query: '"Dyno Nobel" MCP server OR "llms.txt" OR "developer API"'
+  date: '2026-10-21'
+  result: no official server found
+tools:
+- name: globalSearch
+  description: Search the whole website (pages, articles, documents, products).
+  method: GET
+  path: /api/SearchApi/global-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Sort
+  - Keyword
+  - Filters
+- name: articleSearch
+  description: Search news and articles by keyword, category and content type.
+  method: GET
+  path: /api/SearchApi/article-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - Sort
+  - Categories
+  - ContentTypes
+- name: documentSearch
+  description: Search documents (e.g. product sheets, SDS) by keyword, category and content type.
+  method: GET
+  path: /api/SearchApi/document-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Sort
+  - Keyword
+  - Categories
+  - ContentTypes
+- name: productHubSearch
+  description: Search the Dyno Nobel explosives product hub.
+  method: GET
+  path: /api/SearchApi/dyno-nobel-product-hub-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - Sort
+  - Categories
+- name: ipfProductSearch
+  description: Search Incitec Pivot Fertilisers products, filterable by nutrients.
+  method: GET
+  path: /api/SearchApi/ipf-product-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - Sort
+  - Categories
+  - Nutrients
+- name: resourceHubSearch
+  description: Search the resource hub.
+  method: GET
+  path: /api/SearchApi/resource-hub-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - Sort
+  - Categories
+- name: extendedResourceHubSearch
+  description: Search the resource hub with three category facets.
+  method: GET
+  path: /api/SearchApi/extended-resource-hub-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - Sort
+  - Categories1
+  - Categories2
+  - Categories3
+- name: teamMemberSearch
+  description: Search team members by department and location.
+  method: GET
+  path: /api/SearchApi/team-member-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - Departments
+  - Locations
+- name: ipfLocationSearch
+  description: Search Incitec Pivot Fertilisers locations by type.
+  method: GET
+  path: /api/SearchApi/ipf-location-search
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - PageId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - LocationTypes
+- name: ipfRelatedResource
+  description: List resources related to a content item.
+  method: GET
+  path: /api/SearchApi/ipf-related-resource
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - ContentId
+  - PageSize
+  - PageNumber
+  - Keyword
+  - Categories
+- name: autocomplete
+  description: Autocomplete suggestions for a search term.
+  method: GET
+  path: /api/SearchApi/autocomplete
+  operationId_note: operationId proposed by overlays/dyno-nobel-search-overlay.yaml; the original spec has none
+  parameters:
+  - Term
+  - Count

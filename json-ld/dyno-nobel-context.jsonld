@@ -1,0 +1,315 @@
+{
+  "@context": {
+    "@vocab": "https://dynonobel.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dyno": "https://dynonobel.com/schema#",
+    "ArticleSearchResult": "dyno:ArticleSearchResult",
+    "result": {
+      "@id": "dyno:result",
+      "@type": "@id"
+    },
+    "facets": {
+      "@id": "dyno:facets",
+      "@container": "@list"
+    },
+    "ArticleSearchResultItem": "dyno:ArticleSearchResultItem",
+    "articleDate": {
+      "@id": "dyno:articleDate",
+      "@type": "xsd:string"
+    },
+    "header": {
+      "@id": "dyno:header",
+      "@type": "xsd:string"
+    },
+    "summary": {
+      "@id": "dyno:summary",
+      "@type": "xsd:string"
+    },
+    "image": {
+      "@id": "dyno:image",
+      "@type": "@id"
+    },
+    "link": {
+      "@id": "dyno:link",
+      "@type": "@id"
+    },
+    "ArticleSearchResultItemPaging": "dyno:ArticleSearchResultItemPaging",
+    "items": {
+      "@id": "dyno:items",
+      "@container": "@list"
+    },
+    "totalItem": {
+      "@id": "dyno:totalItem",
+      "@type": "xsd:integer"
+    },
+    "currentPage": {
+      "@id": "dyno:currentPage",
+      "@type": "xsd:integer"
+    },
+    "pageSize": {
+      "@id": "dyno:pageSize",
+      "@type": "xsd:integer"
+    },
+    "totalPage": {
+      "@id": "dyno:totalPage",
+      "@type": "xsd:integer"
+    },
+    "hasNextPage": {
+      "@id": "dyno:hasNextPage",
+      "@type": "xsd:boolean"
+    },
+    "message": {
+      "@id": "dyno:message",
+      "@type": "xsd:string"
+    },
+    "DocumentSearchFileType": "dyno:DocumentSearchFileType",
+    "DocumentSearchResult": "dyno:DocumentSearchResult",
+    "resultMessage": {
+      "@id": "dyno:resultMessage",
+      "@type": "xsd:string"
+    },
+    "DocumentSearchResultItem": "dyno:DocumentSearchResultItem",
+    "date": {
+      "@id": "dyno:date",
+      "@type": "xsd:string"
+    },
+    "assetCategory": {
+      "@id": "dyno:assetCategory",
+      "@type": "xsd:string"
+    },
+    "DocumentSearchResultItemPaging": "dyno:DocumentSearchResultItemPaging",
+    "DynoNobelProductHubSearchResult": "dyno:DynoNobelProductHubSearchResult",
+    "DynoNobelProductHubSearchResultItem": "dyno:DynoNobelProductHubSearchResultItem",
+    "productName": {
+      "@id": "dyno:productName",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "dyno:description",
+      "@type": "xsd:string"
+    },
+    "specification": {
+      "@id": "dyno:specification",
+      "@type": "xsd:string"
+    },
+    "techInfo": {
+      "@id": "dyno:techInfo",
+      "@type": "@id"
+    },
+    "sds": {
+      "@id": "dyno:sds",
+      "@type": "@id"
+    },
+    "DynoNobelProductHubSearchResultItemPaging": "dyno:DynoNobelProductHubSearchResultItemPaging",
+    "ExtendedResourceHubSearchResult": "dyno:ExtendedResourceHubSearchResult",
+    "ExtendedResourceHubSearchResultItem": "dyno:ExtendedResourceHubSearchResultItem",
+    "resourceType": {
+      "@id": "dyno:resourceType",
+      "@type": "xsd:string"
+    },
+    "ExtendedResourceHubSearchResultItemPaging": "dyno:ExtendedResourceHubSearchResultItemPaging",
+    "FilterOptionBox": "dyno:FilterOptionBox",
+    "title": {
+      "@id": "dyno:title",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "dyno:value"
+    },
+    "filterProperty": {
+      "@id": "dyno:filterProperty",
+      "@type": "xsd:string"
+    },
+    "selected": {
+      "@id": "dyno:selected",
+      "@type": "xsd:boolean"
+    },
+    "GlobalSearchResult": "dyno:GlobalSearchResult",
+    "filters": {
+      "@id": "dyno:filters",
+      "@type": "@id"
+    },
+    "GlobalSearchResultItem": "dyno:GlobalSearchResultItem",
+    "GlobalSearchResultItemPaging": "dyno:GlobalSearchResultItemPaging",
+    "IPFLocationGroupFacetCount": "dyno:IPFLocationGroupFacetCount",
+    "facetName": {
+      "@id": "dyno:facetName",
+      "@type": "xsd:string"
+    },
+    "IPFLocationResultItem": "dyno:IPFLocationResultItem",
+    "siteName": {
+      "@id": "dyno:siteName",
+      "@type": "xsd:string"
+    },
+    "heading": {
+      "@id": "dyno:heading",
+      "@type": "xsd:string"
+    },
+    "address": {
+      "@id": "dyno:address",
+      "@type": "xsd:string"
+    },
+    "pinColour": {
+      "@id": "dyno:pinColour",
+      "@type": "xsd:string"
+    },
+    "latitude": {
+      "@id": "dyno:latitude",
+      "@type": "xsd:decimal"
+    },
+    "longitude": {
+      "@id": "dyno:longitude",
+      "@type": "xsd:decimal"
+    },
+    "phoneNumber": {
+      "@id": "dyno:phoneNumber",
+      "@type": "@id"
+    },
+    "IPFLocationResultItemPaging": "dyno:IPFLocationResultItemPaging",
+    "IPFLocationSearchResult": "dyno:IPFLocationSearchResult",
+    "IPFProductFacetCount": "dyno:IPFProductFacetCount",
+    "IPFProductSearchResult": "dyno:IPFProductSearchResult",
+    "IPFProductSearchResultItem": "dyno:IPFProductSearchResultItem",
+    "productId": {
+      "@id": "dyno:productId",
+      "@type": "xsd:string"
+    },
+    "bagTag": {
+      "@id": "dyno:bagTag",
+      "@type": "@id"
+    },
+    "productAnalysis": {
+      "@id": "dyno:productAnalysis",
+      "@type": "xsd:string"
+    },
+    "categories": {
+      "@id": "dyno:categories",
+      "@container": "@list"
+    },
+    "nutrients": {
+      "@id": "dyno:nutrients",
+      "@container": "@list"
+    },
+    "IPFProductSearchResultItemPaging": "dyno:IPFProductSearchResultItemPaging",
+    "ImagePropsVm": "dyno:ImagePropsVm",
+    "alternateText": {
+      "@id": "dyno:alternateText",
+      "@type": "xsd:string"
+    },
+    "defaultSrc": {
+      "@id": "dyno:defaultSrc",
+      "@type": "xsd:string"
+    },
+    "sizesAttribute": {
+      "@id": "dyno:sizesAttribute",
+      "@container": "@list"
+    },
+    "srcSet": {
+      "@id": "dyno:srcSet",
+      "@container": "@list"
+    },
+    "srcSetWebp": {
+      "@id": "dyno:srcSetWebp",
+      "@container": "@list"
+    },
+    "isBackground": {
+      "@id": "dyno:isBackground",
+      "@type": "xsd:boolean"
+    },
+    "textContent": {
+      "@id": "dyno:textContent",
+      "@type": "xsd:string"
+    },
+    "isLazy": {
+      "@id": "dyno:isLazy",
+      "@type": "xsd:boolean"
+    },
+    "LinkPropsVm": "dyno:LinkPropsVm",
+    "text": {
+      "@id": "dyno:text",
+      "@type": "xsd:string"
+    },
+    "target": {
+      "@id": "dyno:target",
+      "@type": "xsd:string"
+    },
+    "href": {
+      "@id": "dyno:href",
+      "@type": "xsd:string"
+    },
+    "ariaLabel": {
+      "@id": "dyno:ariaLabel",
+      "@type": "xsd:string"
+    },
+    "OptionItem": "dyno:OptionItem",
+    "count": {
+      "@id": "dyno:count",
+      "@type": "xsd:integer"
+    },
+    "RelatedResourcesSearchResult": "dyno:RelatedResourcesSearchResult",
+    "RelatedResourcesSearchResultItem": "dyno:RelatedResourcesSearchResultItem",
+    "type": {
+      "@id": "dyno:type",
+      "@type": "xsd:string"
+    },
+    "RelatedResourcesSearchResultItemPaging": "dyno:RelatedResourcesSearchResultItemPaging",
+    "ResourceHubSearchResult": "dyno:ResourceHubSearchResult",
+    "ResourceHubSearchResultItem": "dyno:ResourceHubSearchResultItem",
+    "ResourceHubSearchResultItemPaging": "dyno:ResourceHubSearchResultItemPaging",
+    "ResourceOrderByType": "dyno:ResourceOrderByType",
+    "SortOrderByType": "dyno:SortOrderByType",
+    "TeamMemberGroupFacetCount": "dyno:TeamMemberGroupFacetCount",
+    "TeamMemberSearchResult": "dyno:TeamMemberSearchResult",
+    "TeamMemberSearchResultItem": "dyno:TeamMemberSearchResultItem",
+    "profileImage": {
+      "@id": "dyno:profileImage",
+      "@type": "@id"
+    },
+    "fullName": {
+      "@id": "dyno:fullName",
+      "@type": "xsd:string"
+    },
+    "position": {
+      "@id": "dyno:position",
+      "@type": "xsd:string"
+    },
+    "company": {
+      "@id": "dyno:company",
+      "@type": "xsd:string"
+    },
+    "department": {
+      "@id": "dyno:department",
+      "@type": "xsd:string"
+    },
+    "state": {
+      "@id": "dyno:state",
+      "@type": "xsd:string"
+    },
+    "mobileNumber": {
+      "@id": "dyno:mobileNumber",
+      "@type": "@id"
+    },
+    "email": {
+      "@id": "dyno:email",
+      "@type": "@id"
+    },
+    "naa": {
+      "@id": "dyno:naa",
+      "@type": "xsd:string"
+    },
+    "faa": {
+      "@id": "dyno:faa",
+      "@type": "xsd:string"
+    },
+    "TeamMemberSearchResultItemPaging": "dyno:TeamMemberSearchResultItemPaging"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Dyno Nobel API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Dyno Nobel's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-21) from openapi/dyno-nobel-openapi.yml.",
+  "dcterms:created": "2026-10-21",
+  "dcterms:source": [
+    "openapi/dyno-nobel-openapi.yml"
+  ]
+}

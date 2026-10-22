@@ -1,0 +1,30 @@
+openapi: 3.2.0
+info:
+  title: Dyno Nobel Site Manifest API
+  version: '1.0'
+  x-refined-note:
+  - x-ownership differs across the merged source definitions and was not carried
+  - x-source differs across the merged source definitions and was not carried
+  description: 'Operations tagged SiteManifest across 2 of this provider''s published API definitions: dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://www.dynonobel.com
+  description: Production website (its pages call /api/SearchApi/autocomplete)
+- url: https://dev.dynonobel.com
+  description: Staging host that serves this Swagger document
+tags:
+- name: SiteManifest
+paths:
+  /site.webmanifest:
+    get:
+      tags:
+      - SiteManifest
+      responses:
+        '200':
+          description: OK
+      summary: Get site webmanifest
+      x-summary-source: derived
+      operationId: getSiteWebmanifest
+      x-operation-id-source: derived
+x-refined-from:
+- dyno-nobel-swagger-v1.json
+- dyno-nobel-openapi.yml

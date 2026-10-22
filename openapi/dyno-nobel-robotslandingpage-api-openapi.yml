@@ -1,0 +1,47 @@
+openapi: 3.2.0
+info:
+  title: Dyno Nobel Robots Landing Page API
+  version: '1.0'
+  x-refined-note:
+  - x-ownership differs across the merged source definitions and was not carried
+  - x-source differs across the merged source definitions and was not carried
+  description: 'Operations tagged RobotsLandingPage across 2 of this provider''s published API definitions: dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://www.dynonobel.com
+  description: Production website (its pages call /api/SearchApi/autocomplete)
+- url: https://dev.dynonobel.com
+  description: Staging host that serves this Swagger document
+tags:
+- name: RobotsLandingPage
+paths:
+  /stott.robotshandler/administration:
+    get:
+      tags:
+      - RobotsLandingPage
+      responses:
+        '200':
+          description: OK
+      summary: Get stott robotshandler administration
+      x-summary-source: derived
+      operationId: getStottRobotshandlerAdministration
+      x-operation-id-source: derived
+  /stott.robotshandler/static/{staticFileName}:
+    get:
+      tags:
+      - RobotsLandingPage
+      parameters:
+      - name: staticFileName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      summary: Get stott robotshandler static by static file name
+      x-summary-source: derived
+      operationId: getStottRobotshandlerStaticByStaticFileName
+      x-operation-id-source: derived
+x-refined-from:
+- dyno-nobel-swagger-v1.json
+- dyno-nobel-openapi.yml

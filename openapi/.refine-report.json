@@ -1,0 +1,37 @@
+{
+  "provider": "dyno-nobel",
+  "sources": [
+    "_original/dyno-nobel-swagger-v1.json",
+    "dyno-nobel-openapi.yml"
+  ],
+  "outputs": [
+    "dyno-nobel-robotslandingpage-api-openapi.yml",
+    "dyno-nobel-robotstext-api-openapi.yml",
+    "dyno-nobel-searchapi-api-openapi.yml",
+    "dyno-nobel-sitemanifest-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/dyno-nobel-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "dyno-nobel-swagger-v1.json: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "dyno-nobel-swagger-v1.json: declared missing tag: RobotsLandingPage",
+    "dyno-nobel-swagger-v1.json: declared missing tag: RobotsText",
+    "dyno-nobel-swagger-v1.json: declared missing tag: SearchApi",
+    "dyno-nobel-swagger-v1.json: declared missing tag: SiteManifest",
+    "dyno-nobel-openapi.yml: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "dyno-nobel-openapi.yml: declared missing tag: RobotsLandingPage",
+    "dyno-nobel-openapi.yml: declared missing tag: RobotsText",
+    "dyno-nobel-openapi.yml: declared missing tag: SearchApi",
+    "dyno-nobel-openapi.yml: declared missing tag: SiteManifest",
+    "tag 'RobotsLandingPage' spans 2 source specs (dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml): per-path servers applied",
+    "tag 'RobotsText' spans 2 source specs (dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml): per-path servers applied",
+    "tag 'SearchApi' spans 2 source specs (dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml): per-path servers applied",
+    "tag 'SiteManifest' spans 2 source specs (dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+4 apis, 4 total)"
+  ],
+  "skipped": []
+}

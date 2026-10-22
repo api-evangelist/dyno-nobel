@@ -1,0 +1,8 @@
+generated: '2026-10-21'
+method: derived
+source: openapi/dyno-nobel-openapi.yml
+note: The Swagger document (Incitech.Web, served on dev.dynonobel.com) declares no securitySchemes and no security requirement; all 16 operations are anonymous GETs used by the public website's search. There is no developer documentation describing authentication, keys or OAuth.
+schemes:
+- type: none
+  description: No securityScheme declared in the contract; operations are unauthenticated website search endpoints.
+docs: null

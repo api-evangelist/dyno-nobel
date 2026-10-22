@@ -1,0 +1,1471 @@
+openapi: 3.2.0
+info:
+  title: Dyno Nobel Search API
+  version: '1.0'
+  x-refined-note:
+  - x-ownership differs across the merged source definitions and was not carried
+  - x-source differs across the merged source definitions and was not carried
+  description: 'Operations tagged SearchApi across 2 of this provider''s published API definitions: dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://www.dynonobel.com
+  description: Production website (its pages call /api/SearchApi/autocomplete)
+- url: https://dev.dynonobel.com
+  description: Staging host that serves this Swagger document
+tags:
+- name: SearchApi
+paths:
+  /api/SearchApi/global-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Sort
+        in: query
+        schema:
+          $ref: '#/components/schemas/SortOrderByType'
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Filters
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GlobalSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GlobalSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/GlobalSearchResult'
+      summary: Get api search api global search
+      x-summary-source: derived
+      operationId: getApiSearchApiGlobalSearch
+      x-operation-id-source: derived
+  /api/SearchApi/article-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Sort
+        in: query
+        schema:
+          $ref: '#/components/schemas/SortOrderByType'
+      - name: Categories
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: ContentTypes
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ArticleSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ArticleSearchResult'
+      summary: Get api search api article search
+      x-summary-source: derived
+      operationId: getApiSearchApiArticleSearch
+      x-operation-id-source: derived
+  /api/SearchApi/document-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Sort
+        in: query
+        schema:
+          $ref: '#/components/schemas/SortOrderByType'
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Categories
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: ContentTypes
+        in: query
+        schema:
+          type: array
+          items:
+            $ref: '#/components/schemas/DocumentSearchFileType'
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/DocumentSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/DocumentSearchResult'
+      summary: Get api search api document search
+      x-summary-source: derived
+      operationId: getApiSearchApiDocumentSearch
+      x-operation-id-source: derived
+  /api/SearchApi/dyno-nobel-product-hub-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Sort
+        in: query
+        schema:
+          $ref: '#/components/schemas/SortOrderByType'
+      - name: Categories
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/DynoNobelProductHubSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DynoNobelProductHubSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/DynoNobelProductHubSearchResult'
+      summary: Get api search api dyno nobel product hub search
+      x-summary-source: derived
+      operationId: getApiSearchApiDynoNobelProductHubSearch
+      x-operation-id-source: derived
+  /api/SearchApi/ipf-product-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Sort
+        in: query
+        schema:
+          $ref: '#/components/schemas/SortOrderByType'
+      - name: Categories
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: Nutrients
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/IPFProductSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPFProductSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/IPFProductSearchResult'
+      summary: Get api search api ipf product search
+      x-summary-source: derived
+      operationId: getApiSearchApiIpfProductSearch
+      x-operation-id-source: derived
+  /api/SearchApi/resource-hub-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Sort
+        in: query
+        schema:
+          $ref: '#/components/schemas/ResourceOrderByType'
+      - name: Categories
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ResourceHubSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceHubSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ResourceHubSearchResult'
+      summary: Get api search api resource hub search
+      x-summary-source: derived
+      operationId: getApiSearchApiResourceHubSearch
+      x-operation-id-source: derived
+  /api/SearchApi/extended-resource-hub-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Sort
+        in: query
+        schema:
+          $ref: '#/components/schemas/ResourceOrderByType'
+      - name: Categories1
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: Categories2
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: Categories3
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ExtendedResourceHubSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExtendedResourceHubSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ExtendedResourceHubSearchResult'
+      summary: Get api search api extended resource hub search
+      x-summary-source: derived
+      operationId: getApiSearchApiExtendedResourceHubSearch
+      x-operation-id-source: derived
+  /api/SearchApi/team-member-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Departments
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: Locations
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/TeamMemberSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeamMemberSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/TeamMemberSearchResult'
+      summary: Get api search api team member search
+      x-summary-source: derived
+      operationId: getApiSearchApiTeamMemberSearch
+      x-operation-id-source: derived
+  /api/SearchApi/ipf-location-search:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: PageId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: LocationTypes
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/IPFLocationSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPFLocationSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/IPFLocationSearchResult'
+      summary: Get api search api ipf location search
+      x-summary-source: derived
+      operationId: getApiSearchApiIpfLocationSearch
+      x-operation-id-source: derived
+  /api/SearchApi/ipf-related-resource:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: ContentId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: PageNumber
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Keyword
+        in: query
+        schema:
+          type: string
+      - name: Categories
+        in: query
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/RelatedResourcesSearchResult'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RelatedResourcesSearchResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/RelatedResourcesSearchResult'
+      summary: Get api search api ipf related resource
+      x-summary-source: derived
+      operationId: getApiSearchApiIpfRelatedResource
+      x-operation-id-source: derived
+  /api/SearchApi/autocomplete:
+    get:
+      tags:
+      - SearchApi
+      parameters:
+      - name: Term
+        in: query
+        schema:
+          type: string
+      - name: Count
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+            text/json:
+              schema:
+                type: array
+                items:
+                  type: string
+      summary: Get api search api autocomplete
+      x-summary-source: derived
+      operationId: getApiSearchApiAutocomplete
+      x-operation-id-source: derived
+  /api/SearchApi/yourip:
+    get:
+      tags:
+      - SearchApi
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+            text/json:
+              schema:
+                type: array
+                items:
+                  type: string
+      summary: Get api search api yourip
+      x-summary-source: derived
+      operationId: getApiSearchApiYourip
+      x-operation-id-source: derived
+components:
+  schemas:
+    DocumentSearchResult:
+      type: object
+      properties:
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/FilterOptionBox'
+        result:
+          $ref: '#/components/schemas/DocumentSearchResultItemPaging'
+        resultMessage:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    RelatedResourcesSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/RelatedResourcesSearchResultItemPaging'
+        resultMessage:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ExtendedResourceHubSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/ExtendedResourceHubSearchResultItemPaging'
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/FilterOptionBox'
+      additionalProperties: false
+    DocumentSearchResultItem:
+      type: object
+      properties:
+        header:
+          type:
+          - string
+          - 'null'
+        summary:
+          type:
+          - string
+          - 'null'
+        date:
+          type:
+          - string
+          - 'null'
+        assetCategory:
+          type:
+          - string
+          - 'null'
+        link:
+          $ref: '#/components/schemas/LinkPropsVm'
+      additionalProperties: false
+    FilterOptionBox:
+      type: object
+      properties:
+        title:
+          type:
+          - string
+          - 'null'
+        value: {}
+        filterProperty:
+          type:
+          - string
+          - 'null'
+        selected:
+          type: boolean
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/OptionItem'
+      additionalProperties: false
+    RelatedResourcesSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RelatedResourcesSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    IPFProductSearchResultItem:
+      type: object
+      properties:
+        productId:
+          type:
+          - string
+          - 'null'
+        productName:
+          type:
+          - string
+          - 'null'
+        bagTag:
+          $ref: '#/components/schemas/LinkPropsVm'
+        sds:
+          $ref: '#/components/schemas/LinkPropsVm'
+        productAnalysis:
+          type:
+          - string
+          - 'null'
+        categories:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        nutrients:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+      additionalProperties: false
+    TeamMemberSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/TeamMemberSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    GlobalSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/GlobalSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    DocumentSearchFileType:
+      enum:
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    IPFLocationSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IPFLocationResultItemPaging'
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/IPFLocationGroupFacetCount'
+        resultMessage:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    TeamMemberSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/TeamMemberSearchResultItemPaging'
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/TeamMemberGroupFacetCount'
+        resultMessage:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ImagePropsVm:
+      type: object
+      properties:
+        alternateText:
+          type:
+          - string
+          - 'null'
+        defaultSrc:
+          type:
+          - string
+          - 'null'
+        sizesAttribute:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        srcSet:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        srcSetWebp:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        isBackground:
+          type: boolean
+        textContent:
+          type:
+          - string
+          - 'null'
+        isLazy:
+          type: boolean
+      additionalProperties: false
+    IPFLocationResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/IPFLocationResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    DynoNobelProductHubSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/DynoNobelProductHubSearchResultItemPaging'
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/FilterOptionBox'
+      additionalProperties: false
+    ResourceHubSearchResultItem:
+      type: object
+      properties:
+        header:
+          type:
+          - string
+          - 'null'
+        summary:
+          type:
+          - string
+          - 'null'
+        date:
+          type:
+          - string
+          - 'null'
+        resourceType:
+          type:
+          - string
+          - 'null'
+        link:
+          $ref: '#/components/schemas/LinkPropsVm'
+      additionalProperties: false
+    ResourceHubSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/ResourceHubSearchResultItemPaging'
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/FilterOptionBox'
+      additionalProperties: false
+    DynoNobelProductHubSearchResultItem:
+      type: object
+      properties:
+        productName:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        specification:
+          type:
+          - string
+          - 'null'
+        techInfo:
+          $ref: '#/components/schemas/LinkPropsVm'
+        sds:
+          $ref: '#/components/schemas/LinkPropsVm'
+      additionalProperties: false
+    GlobalSearchResultItem:
+      type: object
+      properties:
+        header:
+          type:
+          - string
+          - 'null'
+        summary:
+          type:
+          - string
+          - 'null'
+        link:
+          $ref: '#/components/schemas/LinkPropsVm'
+      additionalProperties: false
+    ResourceOrderByType:
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      type: integer
+      format: int32
+    ArticleSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/ArticleSearchResultItemPaging'
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/FilterOptionBox'
+      additionalProperties: false
+    IPFProductFacetCount:
+      type: object
+      properties:
+        facetName:
+          type:
+          - string
+          - 'null'
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/OptionItem'
+      additionalProperties: false
+    OptionItem:
+      type: object
+      properties:
+        text:
+          type:
+          - string
+          - 'null'
+        value: {}
+        count:
+          type: integer
+          format: int64
+        selected:
+          type: boolean
+      additionalProperties: false
+    RelatedResourcesSearchResultItem:
+      type: object
+      properties:
+        heading:
+          type:
+          - string
+          - 'null'
+        summary:
+          type:
+          - string
+          - 'null'
+        date:
+          type:
+          - string
+          - 'null'
+        link:
+          $ref: '#/components/schemas/LinkPropsVm'
+        type:
+          type:
+          - string
+          - 'null'
+        image:
+          $ref: '#/components/schemas/ImagePropsVm'
+      additionalProperties: false
+    IPFProductSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/IPFProductSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    IPFLocationGroupFacetCount:
+      type: object
+      properties:
+        facetName:
+          type:
+          - string
+          - 'null'
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/OptionItem'
+      additionalProperties: false
+    ArticleSearchResultItem:
+      type: object
+      properties:
+        articleDate:
+          type:
+          - string
+          - 'null'
+        header:
+          type:
+          - string
+          - 'null'
+        summary:
+          type:
+          - string
+          - 'null'
+        image:
+          $ref: '#/components/schemas/ImagePropsVm'
+        link:
+          $ref: '#/components/schemas/LinkPropsVm'
+      additionalProperties: false
+    ExtendedResourceHubSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ExtendedResourceHubSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    GlobalSearchResult:
+      type: object
+      properties:
+        filters:
+          $ref: '#/components/schemas/FilterOptionBox'
+        result:
+          $ref: '#/components/schemas/GlobalSearchResultItemPaging'
+        resultMessage:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    TeamMemberSearchResultItem:
+      type: object
+      properties:
+        profileImage:
+          $ref: '#/components/schemas/ImagePropsVm'
+        fullName:
+          type:
+          - string
+          - 'null'
+        position:
+          type:
+          - string
+          - 'null'
+        company:
+          type:
+          - string
+          - 'null'
+        department:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        mobileNumber:
+          $ref: '#/components/schemas/LinkPropsVm'
+        email:
+          $ref: '#/components/schemas/LinkPropsVm'
+        naa:
+          type:
+          - string
+          - 'null'
+        faa:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ExtendedResourceHubSearchResultItem:
+      type: object
+      properties:
+        header:
+          type:
+          - string
+          - 'null'
+        summary:
+          type:
+          - string
+          - 'null'
+        date:
+          type:
+          - string
+          - 'null'
+        resourceType:
+          type:
+          - string
+          - 'null'
+        link:
+          $ref: '#/components/schemas/LinkPropsVm'
+      additionalProperties: false
+    IPFProductSearchResult:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IPFProductSearchResultItemPaging'
+        facets:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/IPFProductFacetCount'
+      additionalProperties: false
+    DocumentSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DocumentSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ArticleSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ArticleSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ResourceHubSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ResourceHubSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    DynoNobelProductHubSearchResultItemPaging:
+      type: object
+      properties:
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DynoNobelProductHubSearchResultItem'
+        totalItem:
+          type: integer
+          format: int64
+        currentPage:
+          type: integer
+          format: int64
+        pageSize:
+          type: integer
+          format: int64
+        totalPage:
+          type: integer
+          format: int64
+          readOnly: true
+        hasNextPage:
+          type: boolean
+          readOnly: true
+        message:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    SortOrderByType:
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      type: integer
+      format: int32
+    IPFLocationResultItem:
+      type: object
+      properties:
+        siteName:
+          type:
+          - string
+          - 'null'
+        heading:
+          type:
+          - string
+          - 'null'
+        address:
+          type:
+          - string
+          - 'null'
+        pinColour:
+          type:
+          - string
+          - 'null'
+        latitude:
+          type:
+          - number
+          - 'null'
+          format: double
+        longitude:
+          type:
+          - number
+          - 'null'
+          format: double
+        phoneNumber:
+          $ref: '#/components/schemas/LinkPropsVm'
+      additionalProperties: false
+    TeamMemberGroupFacetCount:
+      type: object
+      properties:
+        facetName:
+          type:
+          - string
+          - 'null'
+        items:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/OptionItem'
+      additionalProperties: false
+    LinkPropsVm:
+      type: object
+      properties:
+        text:
+          type:
+          - string
+          - 'null'
+        target:
+          type:
+          - string
+          - 'null'
+        href:
+          type:
+          - string
+          - 'null'
+        title:
+          type:
+          - string
+          - 'null'
+        ariaLabel:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+x-refined-from:
+- dyno-nobel-swagger-v1.json
+- dyno-nobel-openapi.yml

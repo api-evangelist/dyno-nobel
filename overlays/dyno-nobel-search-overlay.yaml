@@ -1,0 +1,125 @@
+overlay: 1.0.0
+info:
+  title: Dyno Nobel Website Search API overlay (API Evangelist)
+  version: '2026-10-21'
+extends: ../openapi/_original/dyno-nobel-openapi.yml
+generated: '2026-10-21'
+method: generated
+source: openapi/dyno-nobel-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-api-evangelist-note: Undocumented website search backend published as Swagger on the staging host dev.dynonobel.com; not an advertised developer
+      API. operationIds and summaries below are API Evangelist additions; the original has none.
+- target: $.paths['/api/SearchApi/global-search'].get
+  update:
+    operationId: globalSearch
+    summary: Search the whole website (pages, articles, documents, products).
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/article-search'].get
+  update:
+    operationId: articleSearch
+    summary: Search news and articles by keyword, category and content type.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/document-search'].get
+  update:
+    operationId: documentSearch
+    summary: Search documents (e.g. product sheets, SDS) by keyword, category and content type.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/dyno-nobel-product-hub-search'].get
+  update:
+    operationId: productHubSearch
+    summary: Search the Dyno Nobel explosives product hub.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/ipf-product-search'].get
+  update:
+    operationId: ipfProductSearch
+    summary: Search Incitec Pivot Fertilisers products, filterable by nutrients.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/resource-hub-search'].get
+  update:
+    operationId: resourceHubSearch
+    summary: Search the resource hub.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/extended-resource-hub-search'].get
+  update:
+    operationId: extendedResourceHubSearch
+    summary: Search the resource hub with three category facets.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/team-member-search'].get
+  update:
+    operationId: teamMemberSearch
+    summary: Search team members by department and location.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/ipf-location-search'].get
+  update:
+    operationId: ipfLocationSearch
+    summary: Search Incitec Pivot Fertilisers locations by type.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/ipf-related-resource'].get
+  update:
+    operationId: ipfRelatedResource
+    summary: List resources related to a content item.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/autocomplete'].get
+  update:
+    operationId: autocomplete
+    summary: Autocomplete suggestions for a search term.
+    tags:
+    - Search
+    x-agent-safe: true
+- target: $.paths['/api/SearchApi/yourip'].get
+  update:
+    operationId: getYourIp
+    summary: Return the caller IP as seen by the site.
+    tags:
+    - Search
+    x-agent-safe: false
+- target: $.paths['/robots.txt'].get
+  update:
+    operationId: getRobotsTxt
+    summary: Serve robots.txt.
+    tags:
+    - Site
+    x-agent-safe: false
+- target: $.paths['/site.webmanifest'].get
+  update:
+    operationId: getSiteWebmanifest
+    summary: Serve the web app manifest.
+    tags:
+    - Site
+    x-agent-safe: false
+- target: $.paths['/stott.robotshandler/administration'].get
+  update:
+    operationId: robotsHandlerAdministration
+    summary: Stott robots handler administration UI (CMS admin).
+    tags:
+    - Site
+    x-agent-safe: false
+- target: $.paths['/stott.robotshandler/static/{staticFileName}'].get
+  update:
+    operationId: robotsHandlerStatic
+    summary: Stott robots handler static asset.
+    tags:
+    - Site
+    x-agent-safe: false

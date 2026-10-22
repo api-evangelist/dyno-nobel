@@ -1,0 +1,30 @@
+openapi: 3.2.0
+info:
+  title: Dyno Nobel Robots Text API
+  version: '1.0'
+  x-refined-note:
+  - x-ownership differs across the merged source definitions and was not carried
+  - x-source differs across the merged source definitions and was not carried
+  description: 'Operations tagged RobotsText across 2 of this provider''s published API definitions: dyno-nobel-swagger-v1.json, dyno-nobel-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://www.dynonobel.com
+  description: Production website (its pages call /api/SearchApi/autocomplete)
+- url: https://dev.dynonobel.com
+  description: Staging host that serves this Swagger document
+tags:
+- name: RobotsText
+paths:
+  /robots.txt:
+    get:
+      tags:
+      - RobotsText
+      responses:
+        '200':
+          description: OK
+      summary: Get robots txt
+      x-summary-source: derived
+      operationId: getRobotsTxt
+      x-operation-id-source: derived
+x-refined-from:
+- dyno-nobel-swagger-v1.json
+- dyno-nobel-openapi.yml

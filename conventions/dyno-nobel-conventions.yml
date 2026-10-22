@@ -1,0 +1,37 @@
+generated: '2026-10-21'
+method: derived
+source: openapi/dyno-nobel-openapi.yml
+note: Derived from the auto-generated Swagger document only; the provider publishes no API documentation describing conventions.
+auth:
+  style: none
+  note: No securitySchemes declared; see authentication/dyno-nobel-authentication.yml.
+idempotency:
+  coverage: na
+  note: Read-only surface - all 16 operations are GET; there are no writes to protect.
+reversibility:
+  status: na
+  note: Read-only API (GET only); no write surface exists to reverse.
+dry_run_mode:
+  status: na
+  note: Read-only API.
+pagination:
+  style: page-number
+  params:
+  - PageNumber
+  - PageSize
+  note: Search operations (global-search, article-search, document-search, product-hub, resource-hub, team-member, ipf-product, ipf-location, ipf-related-resource) take PageNumber and PageSize query parameters; response fields are not documented in the contract. autocomplete uses Term and Count.
+filtering:
+  params:
+  - Keyword
+  - Sort
+  - Categories
+  - Filters
+  note: Per-operation filter parameters (Categories, ContentTypes, Nutrients, Departments, Locations, LocationTypes, Categories1-3) appear in the contract.
+versioning:
+  note: No API version in paths or headers; the Swagger document is labelled v1.
+errors:
+  note: The contract documents only 200 responses; no error envelope is described.
+rate_limit_signaling:
+  note: Not documented.
+request_id:
+  note: Not documented.

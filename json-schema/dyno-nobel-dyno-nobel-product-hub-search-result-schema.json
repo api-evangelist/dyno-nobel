@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/dyno-nobel/main/json-schema/dyno-nobel-dyno-nobel-product-hub-search-result-schema.json",
+  "title": "DynoNobelProductHubSearchResult",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/dyno-nobel-openapi.yml#/components/schemas/DynoNobelProductHubSearchResult",
+  "type": "object",
+  "properties": {
+    "result": {
+      "$ref": "#/$defs/DynoNobelProductHubSearchResultItemPaging"
+    },
+    "facets": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/$defs/FilterOptionBox"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "DynoNobelProductHubSearchResultItem": {
+      "type": "object",
+      "properties": {
+        "productName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "specification": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "techInfo": {
+          "$ref": "#/$defs/LinkPropsVm"
+        },
+        "sds": {
+          "$ref": "#/$defs/LinkPropsVm"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DynoNobelProductHubSearchResultItemPaging": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/DynoNobelProductHubSearchResultItem"
+          }
+        },
+        "totalItem": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "currentPage": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "readOnly": true
+        },
+        "hasNextPage": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "FilterOptionBox": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "nullable": true
+        },
+        "filterProperty": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "selected": {
+          "type": "boolean"
+        },
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/OptionItem"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "LinkPropsVm": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "href": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ariaLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "OptionItem": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "nullable": true
+        },
+        "count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "selected": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,79 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://www.dynonobel.com/privacy-policy/
+- https://www.dynonobel.com/terms-conditions/
+notes: >-
+  Read the two legal pages the pre-flight dossier fetched (both HTTP 200 on 2026-10-21). The privacy
+  policy (written in the name of Incitec Pivot Limited / Dyno Nobel, "Last updated 31 March") speaks to
+  data subject access/correction, cross-border storage locations, onward disclosure to service providers,
+  and children under 16. The Terms & Conditions page carried no regulatory-signal language. The policy
+  also says Dyno Nobel "does not recognise or respond to DNT signals"; it does not mention Global Privacy
+  Control, so no global_privacy_control signal is recorded. No retention period, incident-notification,
+  AI, accessibility or transparency-report language was found.
+signals:
+  data_subject_request:
+    url: https://www.dynonobel.com/privacy-policy/
+    section: '7. Your Choices — Accessing, Correcting, or Updating Your Information'
+    channel: privacy.corp@dynonobel.com (The Privacy Officer)
+    evidence:
+    - source: https://www.dynonobel.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        You may access personal information that we hold about you and where appropriate you may request
+        that it be corrected. If you wish to review your personal information please contact the Privacy
+        Officer at the relevant address provided in Section 15 Privacy Contact below.
+    - source: https://www.dynonobel.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        There is no charge for requesting access to personal information but we may require a person
+        making such request to meet our reasonable costs in providing the access.
+    note: >-
+      Establishes access and correction rights via the Privacy Officer, free to request but with possible
+      cost recovery. No deletion or portability right is stated for general users, and no response SLA is given.
+  data_residency:
+    url: https://www.dynonobel.com/privacy-policy/
+    evidence:
+    - source: https://www.dynonobel.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Australian personal information is processed and stored in IT systems that reside in Australia or
+        USA. North American personal information is processed and stored in IT systems that reside in USA
+        or Australia.
+    note: >-
+      States where personal data is stored by region of collection (Canadian data: Canada, USA or
+      Australia). A disclosure of storage locations, not a customer-selectable residency commitment.
+  subprocessors:
+    url: https://www.dynonobel.com/privacy-policy/
+    evidence:
+    - source: https://www.dynonobel.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        In the normal course of our business operations, we may disclose your information to related
+        bodies corporate, regulators and other companies engaged to perform services for us, including
+        consultants, IT and internet service providers.
+    note: >-
+      Names categories of onward recipients only; no named subprocessor list or change-notification
+      mechanism is published on the pages read.
+  age_assurance:
+    url: https://www.dynonobel.com/privacy-policy/
+    section: '11. Children Under the Age of 16 (USA Only)'
+    evidence:
+    - source: https://www.dynonobel.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Our website is not directed at or intended for children under the age of 16. We do not knowingly
+        collect any information from anyone under 16 years of age.
+    - source: https://www.dynonobel.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        If we learn we have collected or received information from a child under 16 without verification
+        of parental consent, we will delete that information.
+    note: >-
+      A not-directed-at-children statement with delete-on-discovery; no age verification mechanism is described.
