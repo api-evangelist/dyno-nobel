@@ -64,5 +64,140 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Dyno Nobel is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.
-- https://dynonobel.com/
+Dyno Nobel describes itself as a global leader in commercial explosives, delivering performance through practical innovation for mining, quarrying and industrial customers. Its site (www.dynonobel.com) covers explosives products such as initiation systems (Ranger electronic initiation) and bulk technology (Differential Energy), services such as DynoConsult, case studies, safety and sustainability, careers, and a newsroom; the company has moved its global headquarters to Queensland, Australia, and runs an investor centre at investors.dynonobel.com.au. No public developer API documentation was found on its own hosts; dev.dynonobel.com is a noindex staging mirror of the marketing site. Surfaced via the API Evangelist harvest backlog (australia-apidays-2026).
+
+**Areas:** Company · Explosives · Mining · Industrial Manufacturing · Blasting · Australia
+
+## Dyno Nobel on APIs.io
+
+Everything profiled for Dyno Nobel is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dyno-nobel/](https://apis.io/providers/dyno-nobel/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Dyno Nobel Robots Landing Page API](https://apis.io/apis/dyno-nobel/dyno-nobel-robotslandingpage-api/) — The RobotsLandingPage API from Dyno Nobel — 2 operation(s) for robotslandingpage.
+- [Dyno Nobel Robots Text API](https://apis.io/apis/dyno-nobel/dyno-nobel-robotstext-api/) — The RobotsText API from Dyno Nobel — 1 operation(s) for robotstext.
+- [Dyno Nobel Search API](https://apis.io/apis/dyno-nobel/dyno-nobel-searchapi-api/) — The SearchApi API from Dyno Nobel — 12 operation(s) for searchapi.
+- [Dyno Nobel Site Manifest API](https://apis.io/apis/dyno-nobel/dyno-nobel-sitemanifest-api/) — The SiteManifest API from Dyno Nobel — 1 operation(s) for sitemanifest.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Dyno Nobel Agentic Access](https://apis.io/agentic-access/dyno-nobel/dyno-nobel-agentic-access/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [DocumentSearchResult](https://apis.io/schemas/dyno-nobel/dyno-nobel-document-search-result/)
+- [DynoNobelProductHubSearchResult](https://apis.io/schemas/dyno-nobel/dyno-nobel-dyno-nobel-product-hub-search-result/)
+- [ExtendedResourceHubSearchResult](https://apis.io/schemas/dyno-nobel/dyno-nobel-extended-resource-hub-search-result/)
+- [GlobalSearchResult](https://apis.io/schemas/dyno-nobel/dyno-nobel-global-search-result/)
+- [IPFLocationSearchResult](https://apis.io/schemas/dyno-nobel/dyno-nobel-ipflocation-search-result/)
+- [TeamMemberSearchResult](https://apis.io/schemas/dyno-nobel/dyno-nobel-team-member-search-result/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Dyno Nobel Context](https://apis.io/jsonld/dyno-nobel/dyno-nobel-context/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Dyno Nobel Search Overlay](https://apis.io/overlays/dyno-nobel/dyno-nobel-search-overlay/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Dyno Nobel API Rules](https://apis.io/rules/dyno-nobel/dyno-nobel-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Dyno Nobel Authentication](https://apis.io/security/dyno-nobel/dyno-nobel-authentication/)
+- [Dyno Nobel Domain Security](https://apis.io/security/dyno-nobel/dyno-nobel-domain-security/)
+- [Dyno Nobel Vulnerability Disclosure](https://apis.io/security/dyno-nobel/dyno-nobel-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Dyno Nobel Plans Pricing](https://apis.io/plans/dyno-nobel/dyno-nobel-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Dyno Nobel Rate Limits](https://apis.io/rate-limits/dyno-nobel/dyno-nobel-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.dynonobel.com/)
+- [Documentation](https://dev.dynonobel.com/)
+- [Support](https://www.dynonobel.com/contact-us/)
+- [Blog](https://www.dynonobel.com/news-and-media/news/)
+- [Terms of service](https://www.dynonobel.com/terms-conditions/)
+- [Privacy policy](https://www.dynonobel.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 37.6** — thin · rubric 0.24.0 · scored 2026-10-21
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 48.4 |
+| Contract governance | 79.1 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 21.1 |
+
+**Agent readiness 27.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | unknown |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dyno-nobel/](https://apis.io/providers/dyno-nobel/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Dyno Nobel: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dyno-nobel/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
